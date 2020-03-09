@@ -79,15 +79,20 @@
 
 
 
-<meta name="description" content="Welcome to me">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Annie_Y&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="ichunqiu–爆破二12345&lt;?phpinclude &quot;flag.php&quot;;$a &#x3D; @$_REQUEST[&#39;hello&#39;];eval( &quot;var_dump($a);&quot;);show_source(__FILE__);  方法一 这一题把一个file_get_contents()函数命令赋值给$a传入var_dump()中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ichunqiu-boom.md">
+<meta property="og:url" content="http://yoursite.com/2020/03/09/ichunqiu-boom-md/index.html">
 <meta property="og:site_name" content="Annie_Y&#39;s blog">
-<meta property="og:description" content="Welcome to me">
+<meta property="og:description" content="ichunqiu–爆破二12345&lt;?phpinclude &quot;flag.php&quot;;$a &#x3D; @$_REQUEST[&#39;hello&#39;];eval( &quot;var_dump($a);&quot;);show_source(__FILE__);  方法一 这一题把一个file_get_contents()函数命令赋值给$a传入var_dump()中">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/Users/yuananni/Documents/image-20190731114750026.png">
+<meta property="og:image" content="http://yoursite.com/Users/yuananni/Documents/image-20190731133353387.png">
+<meta property="article:published_time" content="2020-03-09T12:41:31.000Z">
+<meta property="article:modified_time" content="2020-03-09T12:42:28.141Z">
 <meta property="article:author" content="ANNI">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/Users/yuananni/Documents/image-20190731114750026.png">
 
 
 
@@ -117,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/09/ichunqiu-boom-md/"/>
 
 
 
 
 
-  <title>Annie_Y's blog</title>
+  <title>ichunqiu-boom.md | Annie_Y's blog</title>
   
 
 
@@ -142,8 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <a href="https://github.com/JSyanni/" target="_blank" rel="noopener"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
@@ -238,9 +242,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -270,9 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/09/ichunqiu-boom-md/" itemprop="url">ichunqiu-boom.md</a></h1>
+          <h1 class="post-title" itemprop="name headline">ichunqiu-boom.md</h1>
         
 
         <div class="post-meta">
@@ -322,9 +324,7 @@
       
 
       
-        
-          
-            <h2 id="ichunqiu–爆破二"><a href="#ichunqiu–爆破二" class="headerlink" title="ichunqiu–爆破二"></a>ichunqiu–爆破二</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">include &quot;flag.php&quot;;</span><br><span class="line">$a &#x3D; @$_REQUEST[&#39;hello&#39;];</span><br><span class="line">eval( &quot;var_dump($a);&quot;);</span><br><span class="line">show_source(__FILE__);</span><br></pre></td></tr></table></figure>
+        <h2 id="ichunqiu–爆破二"><a href="#ichunqiu–爆破二" class="headerlink" title="ichunqiu–爆破二"></a>ichunqiu–爆破二</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">include &quot;flag.php&quot;;</span><br><span class="line">$a &#x3D; @$_REQUEST[&#39;hello&#39;];</span><br><span class="line">eval( &quot;var_dump($a);&quot;);</span><br><span class="line">show_source(__FILE__);</span><br></pre></td></tr></table></figure>
 
 <p><strong>方法一</strong></p>
 <p>这一题把一个file_get_contents()函数命令赋值给$a传入var_dump()中。var_dump()函数就是把这个命令以字符串的形式返回，进入到嵌套的eval函数里面，让eval函数来执行这行命令。</p>
@@ -402,8 +402,6 @@
 <p>?hello=1);print_r(file(%27flag.php%27)</p>
 <p>构建的URL触发的 eval操作为<br><code>eval(&quot;var_dump(1);print_r(file(&quot;./flag.php&quot;)&quot;)</code></p>
 
-          
-        
       
     </div>
     
@@ -420,142 +418,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/09/Page_Two/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ANNI">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Annie_Y's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/09/Page_Two/" itemprop="url">Page_Two</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-09T14:54:52+08:00">
-                2020-03-09
-              </time>
+              <a href="/2020/03/09/Page_Two/" rel="next" title="Page_Two">
+                <i class="fa fa-chevron-left"></i> Page_Two
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="Android-studio-的第一个Hello-World程序"><a href="#Android-studio-的第一个Hello-World程序" class="headerlink" title="Android studio 的第一个Hello World程序"></a>Android studio 的第一个Hello World程序</h2><p><img src="https://s2.ax1x.com/2020/03/09/8pnuDS.jpg" alt="8pnuDS.jpg"></p>
-<p><strong>1.点击开始一个项目</strong></p>
-<p><strong>2.进入后，选择 <code>Basic Activity</code>,编辑好项目的名字为Helloworld，以及相关路径，点击finish即可。</strong></p>
-<p><strong>3.点击<code>MainActivity</code></strong></p>
-<p><img src="https://s2.ax1x.com/2020/03/09/8puNRI.png" alt="8puNRI.png"></p>
-<p><strong>4.设置device  右上角倒数第二个图标，鼠标静置看到<code>AVD manage</code></strong></p>
-<p><img src="https://s2.ax1x.com/2020/03/09/8pMk4J.png" alt="8pMk4J.png"></p>
-<p><strong>点击后，<code>Create Virtual Device</code>，设置你想要的device</strong></p>
-<p><strong>5.设置好之后，关掉device，运行MainActivity</strong></p>
-<p><strong>6.成功后如下所示</strong></p>
-<p>[<img src="https://s2.ax1x.com/2020/03/09/8pllpd.png" alt="8pllpd.png"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -565,283 +449,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/03/First_page/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ANNI">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Annie_Y's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/03/First_page/" itemprop="url">First_page</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-03T17:52:22+08:00">
-                2020-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="hello-2020-3-3"><a href="#hello-2020-3-3" class="headerlink" title="hello 2020 3.3"></a>hello 2020 3.3</h2><p>时隔一年多，我终于搭建了博客。今天是2020年三月三日。记录一下我的搭建过程。</p>
-<p><img src="https://s2.ax1x.com/2020/03/03/3hXkz8.png" alt=""></p>
-<p>po一张鼬神的图</p>
-<p><font color="#dd0000">（我真的是哭着搭完的。。）</font><br />    </p>
-<p>1.首先从github上注册账号，并且新建项目，项目名称切记写成<code>yourgithubname.github.io</code></p>
-<p>2.mac系统从终端安装<code>npm</code>,<code>nodejs</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>按照命令安装以上内容</p>
-<p>3.初始化博客，在/user下创建blog目录，在blog目录下执行<code>hexo init</code>，之后输入<code>hexo s(server)</code>命令即可在本地看到博客页面样式</p>
-<p>4.将博客部署到github上，点击我们创建的项目，点击<a href="https://github.com/new" target="_blank" rel="noopener">New repository</a>, 主要注意以下内容</p>
-<p>​             <em>1).配置自己的SSH密钥(keys)</em></p>
-<p>​             <em>2).<code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code>用该命令创建密钥</em></p>
-<p>​             <em>3).出现如下框中的提示，一直回车，最终会生成属于你的ssh rsa密钥，进入提示中相关文档，cat密钥，点击github中的setting，将密钥填充。</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
-
-<p>​             <em>4).<code>$ ssh -T git@github.com</code>检测设置是否成功</em></p>
-<p>​             <em>5).在<code>hexo</code>文件下执行如下命令,一定要进入<font color="#dd0000">hexo</font>中<br /></em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>​             <em>6).访问 <font color="#dd0000">yourgithubname.github.io</font>即可访问博客<br /></em></p>
-<p>一定要注意，你讲博客设置在哪一个文件夹下，最后执行hexo时，一定要进入文件夹，执行5中的命令。不然是404</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ANNI">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Annie_Y's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/03/hello-world/" itemprop="url">hello-world</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-03T14:24:59+08:00">
-                2020-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -849,6 +461,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -869,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -912,6 +537,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ichunqiu–爆破二"><span class="nav-number">1.</span> <span class="nav-text">ichunqiu–爆破二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ichunqiu-–爆破一"><span class="nav-number">2.</span> <span class="nav-text">ichunqiu –爆破一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ichunqiu-bp-3"><span class="nav-number">3.</span> <span class="nav-text">ichunqiu bp-3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bugku"><span class="nav-number">4.</span> <span class="nav-text">bugku</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">4.1.</span> <span class="nav-text">解题思路</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1052,6 +693,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
