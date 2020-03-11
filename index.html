@@ -191,16 +191,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
@@ -295,6 +285,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">-linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -323,35 +335,14 @@
 
       
         
-          
-            <p>#tac、cat、tail、less、more、nl命令的学习与了解</p>
-<p>##<strong>cat:</strong> (cat只适合查看小文件，当查看大文件时，只显示给我们最后的信息)</p>
-<p>cat -n:在查看时，会给每一行添加行数编号</p>
-<p>cat查看二进制文件时事乱码。</p>
-<p><strong>od:</strong> od(选项)(参数) od命令用于输出文件的八进制、十六进制或其它格式编码的字节，通常用于显示或查看文件中不能直接显示在终端的字符。</p>
-<p>-c：可打印的字符或者反斜杠，<strong>用阿斯克码显示</strong>；</p>
-<p>-t&lt;输出格式&gt;或–format=&lt;输出格式&gt;：设置输出格式；</p>
-<p><strong>strings:</strong> strings命令在对象文件或二进制文件中查找可打印的字符串。 列出ls中所有的ASCII文本</p>
-<p>##<strong>tac:</strong>倒着显示文件（行数倒过来）</p>
-<p>##<strong>nl</strong>（与cat -n效果相同）:查看文件时同时显示行号。</p>
-<p>注意：当出现空白行时，空白行不占用行数。要想给空白行相应的行数，则用nl -b a [文件名]。</p>
-<p>##more： more [文件]. more可以让我们详细的看长文件的内容。cat只能显示长文件最后的内容。</p>
-<p>more 回车一行一行显示内容；空格一屏幕一次显示内容。q退出。但只能向后不能向前。</p>
-<p>##less: less[文件]</p>
-<p>回车一行一行显示内容；空格一屏幕一次显示内容。</p>
-<p>用pgup或pgdn可以控制向前还是向后翻页。</p>
-<p>home切换到文件当前页面，end切换到文件最后一页</p>
-<p>less还可以查看关键字，用  /关键字+回车  即可查找</p>
-<p>n:自上而下查找</p>
-<p>N:自下而上查找</p>
-<p>（more也同样可以用/查找，）</p>
-<p>##head:查看文件头几行（默认查看头10行）</p>
-<p>head -3 /文件。查看前三行</p>
-<p>##tail:查看文件尾几行（默认十行）</p>
-<p>tail -3 （tail -3。查看尾部三行）</p>
-<p>tail -f /文件。可以用来查看实时的日志文件</p>
-
-          
+          <h1 id="tac、cat、tail、less、more、nl命令的学习与了解"><a href="#tac、cat、tail、less、more、nl命令的学习与了解" class="headerlink" title="tac、cat、tail、less、more、nl命令的学习与了解"></a>tac、cat、tail、less、more、nl命令的学习与了解</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/11/linuxlearn-md/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -440,6 +431,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">-CTF</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -468,86 +481,14 @@
 
       
         
-          
-            <h2 id="ichunqiu–爆破二"><a href="#ichunqiu–爆破二" class="headerlink" title="ichunqiu–爆破二"></a>ichunqiu–爆破二</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">include &quot;flag.php&quot;;</span><br><span class="line">$a &#x3D; @$_REQUEST[&#39;hello&#39;];</span><br><span class="line">eval( &quot;var_dump($a);&quot;);</span><br><span class="line">show_source(__FILE__);</span><br></pre></td></tr></table></figure>
-
-<p><strong>方法一</strong></p>
-<p>这一题把一个file_get_contents()函数命令赋值给$a传入var_dump()中。var_dump()函数就是把这个命令以字符串的形式返回，进入到嵌套的eval函数里面，让eval函数来执行这行命令。</p>
-<p>题目中说flag不在变量里</p>
-<p>那我们根据代码可猜测flag在文件中</p>
-<p>构造pyload.  ?hello=file_get_contents(‘flag.php’) 再查看源码</p>
-<p>活构造 ?hello=highlight_file(‘flag.php’)  直接看到高亮flag</p>
-<p><strong>方法二</strong></p>
-<p>发现flag没有在变量里面但是那个<code>eval(&quot;var_dump($a);&quot;)</code>在</p>
-<p>就要想方法利用下，因为按常理flag都在flag.php下我们只要能拿到flag.php里面的内容就能拿到flag</p>
-<p>我们利用拼接让eval执行我们需要的函数</p>
-<p>[<code>http://488e091106444c2fab369878c48265124b4bf199d529448b.game.ichunqiu.com/?hello=1);show_source(%27flag.php%27);var_dump(](http://488e091106444c2fab369878c48265124b4bf199d529448b.game.ichunqiu.com/?hello=1);show_source(&#39;flag.php&#39;);var_dump()</code></p>
-<p>这样跟eval函数拼接就变成了var_dump(1);show_source(%27flag.php%27);var_dump();就可以导出flag.php的文件内容得到flag</p>
-<p>2.<a href="http://488e091106444c2fab369878c48265124b4bf199d529448b.game.ichunqiu.com/?hello=1" target="_blank" rel="noopener">http://488e091106444c2fab369878c48265124b4bf199d529448b.game.ichunqiu.com/</a>;show_source(‘flag.php’);var_dump()?hello=$a);print_r(file(“./flag.php”)); //</p>
-<p>\3. <a href="http://488e091106444c2fab369878c48265124b4bf199d529448b.game.ichunqiu.com/?hello=1" target="_blank" rel="noopener">http://488e091106444c2fab369878c48265124b4bf199d529448b.game.ichunqiu.com/?hello=$a);echo <code>cat ./flag.php</code>; //</a>;show_source(‘flag.php’);var_dump()</p>
-<p><a href="http://488e091106444c2fab369878c48265124b4bf199d529448b.game.ichunqiu.com/?hello=1" target="_blank" rel="noopener">注意这里是反引号 , 在 bash 中反引号括起来的字符串也是会被当成代码执行</a>;show_source(‘flag.php’);var_dump()</p>
-<p>4.<a href="http://488e091106444c2fab369878c48265124b4bf199d529448b.game.ichunqiu.com/?hello=1" target="_blank" rel="noopener">http://488e091106444c2fab369878c48265124b4bf199d529448b.game.ichunqiu.com/?hello=$a);$a=”sys”;$b=”tem”;$c=$a.$b;echo%20$c;$c(“cat%20./flag.php”); //</a>;show_source(‘flag.php’);var_dump()</p>
-<h2 id="ichunqiu-–爆破一"><a href="#ichunqiu-–爆破一" class="headerlink" title="ichunqiu –爆破一"></a>ichunqiu –爆破一</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">include &quot;flag.php&quot;;</span><br><span class="line">$a &#x3D; @$_REQUEST[&#39;hello&#39;];</span><br><span class="line">if(!preg_match(&#39;&#x2F;^\w*$&#x2F;&#39;,$a ))&#123;</span><br><span class="line">  die(&#39;ERROR&#39;);</span><br><span class="line">&#125;</span><br><span class="line">eval(&quot;var_dump($$a);&quot;);</span><br><span class="line">show_source(__FILE__);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>flag在某六位变量里</p>
-<p>先看看代码第 4 行的变量名匹配规则，是通过<a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank" rel="noopener">正则表达式</a> <code>/^\w*$/</code> 完成的，其中：</p>
-<ul>
-<li><p><code>^n</code>：匹配任何开头为 <code>n</code> 的字符串。</p>
-</li>
-<li><p><code>n$</code>：匹配任何结尾为 <code>n</code> 的字符串。</p>
-</li>
-<li><p><code>n*</code>：匹配任何包含零个或多个 n 的字符串。</p>
-</li>
-<li><p><code>\w</code>：查找单词字符，包括大写字母 <code>A-Z</code>、小写字母 <code>a-z</code>、数字 <code>0-9</code>、下划线 <code>_</code>。 </p>
-<p>###超级全局变量 $GLOBALS###</p>
-<p>由第 3 行可知，通过 GET 请求或 POST 请求提交的 <code>hello</code> 参数，将其赋值给 PHP 变量 <code>$a</code>，再到第 7 行的代码执行函数 <a href="http://www.php.net/eval" target="_blank" rel="noopener"><code>eval()</code></a> 中，由 <a href="http://php.net/manual/en/function.var-dump.php" target="_blank" rel="noopener"><code>var_dump()</code></a> 函数变量的类型、值、结构等信息打印出来。</p>
-<blockquote>
-<p>小贴士：<code>eval()</code> 函数的执行顺序，是先将变量 <code>$a</code> 解析得到字符串（设为 <code>xxx</code>），再与 <code>$</code> 拼接，最后执行 <code>var_dump($xxx);</code>。详情可参考：[玩转 PHP eval() 中的单双引号](<a href="https://ciphersaw.github.io/2017/11/16/玩转" target="_blank" rel="noopener">https://ciphersaw.github.io/2017/11/16/玩转</a> PHP eval() 中的单双引号/)。   </p>
-</blockquote>
-</li>
-</ul>
-<p>既然 flag 存放在某个变量中，这时我们应该想到超级全局变量 <a href="http://php.net/manual/en/reserved.variables.globals.php" target="_blank" rel="noopener"><code>$GLOBALS</code></a>，它是一个包含了全局作用域中全部变量的关联数组，变量名即为数组的键值，<strong>注意变量名必须全部大写</strong></p>
-<p>payload /?hello=GLOBALS</p>
-<p><img src="/Users/yuananni/Documents/image-20190731114750026.png" alt="image-20190731114750026"></p>
-<p>即可获得 flag，同时也看到了传说中的某六位变量 <code>$d3f0f8</code>。</p>
-<h2 id="ichunqiu-bp-3"><a href="#ichunqiu-bp-3" class="headerlink" title="ichunqiu bp-3"></a>ichunqiu bp-3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">error_reporting(0);&#x2F;&#x2F; 关闭错误报告</span><br><span class="line">session_start();&#x2F;&#x2F;启动会话</span><br><span class="line">require(&#39;.&#x2F;flag.php&#39;);</span><br><span class="line">if(!isset($_SESSION[&#39;nums&#39;]))&#123;&#x2F;&#x2F;isset() — 检测变量是否设置。</span><br><span class="line">  $_SESSION[&#39;nums&#39;] &#x3D; 0;</span><br><span class="line">  $_SESSION[&#39;time&#39;] &#x3D; time();&#x2F;&#x2F;返回当前时间的 Unix 时间戳</span><br><span class="line">  $_SESSION[&#39;whoami&#39;] &#x3D; &#39;ea&#39;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if($_SESSION[&#39;time&#39;]+120&lt;time())&#123;</span><br><span class="line">  session_destroy();&#x2F;&#x2F;session_destroy — 销毁一个会话中的全部数据</span><br><span class="line">&#125;&#x2F;&#x2F;120s后会话结束</span><br><span class="line"></span><br><span class="line">$value &#x3D; $_REQUEST[&#39;value&#39;];</span><br><span class="line">$str_rand &#x3D; range(&#39;a&#39;, &#39;z&#39;);&#x2F;&#x2F;range创建一个包含从 &quot;a&quot; 到 &quot;z&quot; 之间的元素范围的数组</span><br><span class="line">$str_rands &#x3D; $str_rand[mt_rand(0,25)].$str_rand[mt_rand(0,25)];&#x2F;&#x2F;mt_rand() 使用 Mersenne Twister 算法返回0到25之间的随机整数。$str_rand[mt_rand(0,25)]返回&quot;a&quot; 到 &quot;z&quot;之间任意字母。$str_rand[mt_rand(0,25)].$str_rand[mt_rand(0,25)]是两任意字母相连</span><br><span class="line"></span><br><span class="line">if($_SESSION[&#39;whoami&#39;]&#x3D;&#x3D;($value[0].$value[1]) &amp;&amp; substr(md5($value),5,4)&#x3D;&#x3D;0)&#123;&#x2F;&#x2F;substr(string,start,length)。&#x3D;&#x3D;&#x3D;是包括变量值与类型完全相等。&#x3D;&#x3D;只是比较两个数的值是否相等，由于substr是字符串，和数字比较的时候会强制转化成数字0，自然和0相等。</span><br><span class="line">  $_SESSION[&#39;nums&#39;]++;</span><br><span class="line">  $_SESSION[&#39;whoami&#39;] &#x3D; $str_rands;</span><br><span class="line">  echo $str_rands;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if($_SESSION[&#39;nums&#39;]&gt;&#x3D;10)&#123;&#x2F;&#x2F;循环10次输出flag，暴力破解</span><br><span class="line">  echo $flag;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">show_source(__FILE__);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>先建立session，而且有效期只有120秒，好短</li>
-<li>然后取两次随机字符，拼接在一起，构成<code>$str_rands</code></li>
-<li>get/post的参数<code>value</code></li>
-<li>如果<code>$_SESSION[&#39;whoami&#39;]</code>等于<code>value</code>的第一位和第二位，并且，(md5($value)的第五位起的连着4位 <strong>==</strong>0), <code>num++</code>，然后输出新的随机字符串</li>
-<li>如果whoami的值大于等于10了，输出flag</li>
-<li>注意<code>==</code>，若比较，如果传入的value是数组，则md5(value)返回NULL，NULL==0成立。</li>
-</ol>
-<p><strong>方法一</strong>：</p>
-<p>写脚本解决</p>
-<p>脚本见python ichunqiu_b3</p>
-<p><strong>方法二</strong>：</p>
-<p>&amp;&amp;与操作有一个为1 则为1；||或操作有一个为0则为0</p>
-<p>所以在这段代码中，我们只要保证$_SESSION[‘whoami’]<code>等于</code>value`的第一位和第二位即可</p>
-<p>先设置初始值nums=0，time是当前时间，whoami=ea。当whoami=value时，num+1，whoami=$str_rands，循环。nums&gt;=10时，打印flag。120s后会话结束，由于时间120秒，完全可以手工做10次，即可得到flag。</p>
-<p>方法：先设置数组value[]=ea</p>
-<p>`如何通过 GET 或 POST 请求，传送同一数组参数的不同元素值。常见方法有以下两种：</p>
-<p>value[]=e&amp;value[]=a<br>value[0]=e&amp;value[1]=a</p>
-<p>value=ea</p>
-<p>我们构造payload 以上三种都可以</p>
-<p>?value[0]=e&amp;value[1]=a.  页面会给我们两个字母出来，我们将两个字母依次再次传入，页面会继续给我们两个随机字母</p>
-<p><img src="/Users/yuananni/Documents/image-20190731133353387.png" alt="image-20190731133353387"></p>
-<p>下次传入提示的rc. 依次输入 十次后会看见flag</p>
-<p>因为这题是在两分钟内传十次，手动还可以，如果在时间范围内不能实现的传参数，我们只能采取脚本。</p>
-<h2 id="bugku"><a href="#bugku" class="headerlink" title="bugku"></a>bugku</h2><p><strong><em>本地包涵</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">    include &quot;flag.php&quot;; </span><br><span class="line">    $a &#x3D; @$_REQUEST[&#39;hello&#39;]; </span><br><span class="line">    eval( &quot;var_dump($a);&quot;); </span><br><span class="line">    show_source(__FILE__); </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>eval应该是此题的突破口，能够执行php代码。<br>hello是接受参数的变量，接下来就是构建hello变量，使其能够闭合var_dump，利用print_r输出</p>
-<p>首先闭合var_dump: <code>1)&quot;;</code><br>第二步构建print_r：<code>print_r(file(&quot;./flag.php&quot;));</code></p>
-<p>URL构建结束：<br><code>http://123.206.87.240:8003/index.php?hello=1);print_r(file(&quot;./flag.php&quot;)</code></p>
-<p>?hello=1);print_r(file(%27flag.php%27)</p>
-<p>构建的URL触发的 eval操作为<br><code>eval(&quot;var_dump(1);print_r(file(&quot;./flag.php&quot;)&quot;)</code></p>
-
-          
+          <h2 id="ichunqiu–爆破二"><a href="#ichunqiu–爆破二" class="headerlink" title="ichunqiu–爆破二"></a>ichunqiu–爆破二</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/09/ichunqiu-boom-md/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -664,20 +605,14 @@
 
       
         
-          
-            <h2 id="Android-studio-的第一个Hello-World程序"><a href="#Android-studio-的第一个Hello-World程序" class="headerlink" title="Android studio 的第一个Hello World程序"></a>Android studio 的第一个Hello World程序</h2><p><img src="https://s2.ax1x.com/2020/03/09/8pnuDS.jpg" alt="8pnuDS.jpg"></p>
-<p><strong>1.点击开始一个项目</strong></p>
-<p><strong>2.进入后，选择 <code>Basic Activity</code>,编辑好项目的名字为Helloworld，以及相关路径，点击finish即可。</strong></p>
-<p><strong>3.点击<code>MainActivity</code></strong></p>
-<p><img src="https://s2.ax1x.com/2020/03/09/8puNRI.png" alt="8puNRI.png"></p>
-<p><strong>4.设置device  右上角倒数第二个图标，鼠标静置看到<code>AVD manage</code></strong></p>
-<p><img src="https://s2.ax1x.com/2020/03/09/8pMk4J.png" alt="8pMk4J.png"></p>
-<p><strong>点击后，<code>Create Virtual Device</code>，设置你想要的device</strong></p>
-<p><strong>5.设置好之后，关掉device，运行MainActivity</strong></p>
-<p><strong>6.成功后如下所示</strong></p>
-<p>[<img src="https://s2.ax1x.com/2020/03/09/8pllpd.png" alt="8pllpd.png"></p>
-
-          
+          <h2 id="Android-studio-的第一个Hello-World程序"><a href="#Android-studio-的第一个Hello-World程序" class="headerlink" title="Android studio 的第一个Hello World程序"></a>Android studio 的第一个Hello World程序</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/09/Page_Two/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -794,31 +729,14 @@
 
       
         
-          
-            <h2 id="hello-2020-3-3"><a href="#hello-2020-3-3" class="headerlink" title="hello 2020 3.3"></a>hello 2020 3.3</h2><p>时隔一年多，我终于搭建了博客。今天是2020年三月三日。记录一下我的搭建过程。</p>
-<p><img src="https://s2.ax1x.com/2020/03/03/3hXkz8.png" alt=""></p>
-<p>po一张鼬神的图</p>
-<p><font color="#dd0000">（我真的是哭着搭完的。。）</font><br />    </p>
-<p>1.首先从github上注册账号，并且新建项目，项目名称切记写成<code>yourgithubname.github.io</code></p>
-<p>2.mac系统从终端安装<code>npm</code>,<code>nodejs</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>按照命令安装以上内容</p>
-<p>3.初始化博客，在/user下创建blog目录，在blog目录下执行<code>hexo init</code>，之后输入<code>hexo s(server)</code>命令即可在本地看到博客页面样式</p>
-<p>4.将博客部署到github上，点击我们创建的项目，点击<a href="https://github.com/new" target="_blank" rel="noopener">New repository</a>, 主要注意以下内容</p>
-<p>​             <em>1).配置自己的SSH密钥(keys)</em></p>
-<p>​             <em>2).<code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code>用该命令创建密钥</em></p>
-<p>​             <em>3).出现如下框中的提示，一直回车，最终会生成属于你的ssh rsa密钥，进入提示中相关文档，cat密钥，点击github中的setting，将密钥填充。</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
-
-<p>​             <em>4).<code>$ ssh -T git@github.com</code>检测设置是否成功</em></p>
-<p>​             <em>5).在<code>hexo</code>文件下执行如下命令,一定要进入<font color="#dd0000">hexo</font>中<br /></em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>​             <em>6).访问 <font color="#dd0000">yourgithubname.github.io</font>即可访问博客<br /></em></p>
-<p>一定要注意，你讲博客设置在哪一个文件夹下，最后执行hexo时，一定要进入文件夹，执行5中的命令。不然是404</p>
-
-          
+          <h2 id="hello-2020-3-3"><a href="#hello-2020-3-3" class="headerlink" title="hello 2020 3.3"></a>hello 2020 3.3</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/03/First_page/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -936,7 +854,9 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+            <a id="more"></a>
+
+<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
@@ -1036,6 +956,15 @@
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
             
 
             

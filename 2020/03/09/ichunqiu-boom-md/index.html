@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="ichunqiu–爆破二12345&lt;?phpinclude &quot;flag.php&quot;;$a &#x3D; @$_REQUEST[&#39;hello&#39;];eval( &quot;var_dump($a);&quot;);show_source(__FILE__);  方法一 这一题把一个file_get_contents()函数命令赋值给$a传入var_dump()中">
+<meta name="description" content="ichunqiu–爆破二">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ichunqiu-boom.md">
 <meta property="og:url" content="http://yoursite.com/2020/03/09/ichunqiu-boom-md/index.html">
 <meta property="og:site_name" content="Annie_Y&#39;s blog">
-<meta property="og:description" content="ichunqiu–爆破二12345&lt;?phpinclude &quot;flag.php&quot;;$a &#x3D; @$_REQUEST[&#39;hello&#39;];eval( &quot;var_dump($a);&quot;);show_source(__FILE__);  方法一 这一题把一个file_get_contents()函数命令赋值给$a传入var_dump()中">
+<meta property="og:description" content="ichunqiu–爆破二">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/Users/yuananni/Documents/image-20190731114750026.png">
 <meta property="og:image" content="http://yoursite.com/Users/yuananni/Documents/image-20190731133353387.png">
 <meta property="article:published_time" content="2020-03-09T12:41:31.000Z">
-<meta property="article:modified_time" content="2020-03-09T12:42:28.141Z">
+<meta property="article:modified_time" content="2020-03-11T12:10:45.927Z">
 <meta property="article:author" content="ANNI">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/Users/yuananni/Documents/image-20190731114750026.png">
@@ -195,16 +195,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
@@ -297,6 +287,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">-CTF</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -324,7 +336,9 @@
       
 
       
-        <h2 id="ichunqiu–爆破二"><a href="#ichunqiu–爆破二" class="headerlink" title="ichunqiu–爆破二"></a>ichunqiu–爆破二</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">include &quot;flag.php&quot;;</span><br><span class="line">$a &#x3D; @$_REQUEST[&#39;hello&#39;];</span><br><span class="line">eval( &quot;var_dump($a);&quot;);</span><br><span class="line">show_source(__FILE__);</span><br></pre></td></tr></table></figure>
+        <h2 id="ichunqiu–爆破二"><a href="#ichunqiu–爆破二" class="headerlink" title="ichunqiu–爆破二"></a>ichunqiu–爆破二</h2><a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">include &quot;flag.php&quot;;</span><br><span class="line">$a &#x3D; @$_REQUEST[&#39;hello&#39;];</span><br><span class="line">eval( &quot;var_dump($a);&quot;);</span><br><span class="line">show_source(__FILE__);</span><br></pre></td></tr></table></figure>
 
 <p><strong>方法一</strong></p>
 <p>这一题把一个file_get_contents()函数命令赋值给$a传入var_dump()中。var_dump()函数就是把这个命令以字符串的形式返回，进入到嵌套的eval函数里面，让eval函数来执行这行命令。</p>
@@ -520,6 +534,15 @@
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
             
 
             
