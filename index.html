@@ -253,6 +253,151 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/11/linuxlearn-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ANNI">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Annie_Y's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/11/linuxlearn-md/" itemprop="url">linuxlearn.md</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-11T19:38:14+08:00">
+                2020-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#tac、cat、tail、less、more、nl命令的学习与了解</p>
+<p>##<strong>cat:</strong> (cat只适合查看小文件，当查看大文件时，只显示给我们最后的信息)</p>
+<p>cat -n:在查看时，会给每一行添加行数编号</p>
+<p>cat查看二进制文件时事乱码。</p>
+<p><strong>od:</strong> od(选项)(参数) od命令用于输出文件的八进制、十六进制或其它格式编码的字节，通常用于显示或查看文件中不能直接显示在终端的字符。</p>
+<p>-c：可打印的字符或者反斜杠，<strong>用阿斯克码显示</strong>；</p>
+<p>-t&lt;输出格式&gt;或–format=&lt;输出格式&gt;：设置输出格式；</p>
+<p><strong>strings:</strong> strings命令在对象文件或二进制文件中查找可打印的字符串。 列出ls中所有的ASCII文本</p>
+<p>##<strong>tac:</strong>倒着显示文件（行数倒过来）</p>
+<p>##<strong>nl</strong>（与cat -n效果相同）:查看文件时同时显示行号。</p>
+<p>注意：当出现空白行时，空白行不占用行数。要想给空白行相应的行数，则用nl -b a [文件名]。</p>
+<p>##more： more [文件]. more可以让我们详细的看长文件的内容。cat只能显示长文件最后的内容。</p>
+<p>more 回车一行一行显示内容；空格一屏幕一次显示内容。q退出。但只能向后不能向前。</p>
+<p>##less: less[文件]</p>
+<p>回车一行一行显示内容；空格一屏幕一次显示内容。</p>
+<p>用pgup或pgdn可以控制向前还是向后翻页。</p>
+<p>home切换到文件当前页面，end切换到文件最后一页</p>
+<p>less还可以查看关键字，用  /关键字+回车  即可查找</p>
+<p>n:自上而下查找</p>
+<p>N:自下而上查找</p>
+<p>（more也同样可以用/查找，）</p>
+<p>##head:查看文件头几行（默认查看头10行）</p>
+<p>head -3 /文件。查看前三行</p>
+<p>##tail:查看文件尾几行（默认十行）</p>
+<p>tail -3 （tail -3。查看尾部三行）</p>
+<p>tail -f /文件。可以用来查看实时的日志文件</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/09/ichunqiu-boom-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -885,7 +1030,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
