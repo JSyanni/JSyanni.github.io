@@ -86,17 +86,17 @@
 <meta property="og:site_name" content="Annie_Y&#39;s blog">
 <meta property="og:description" content="umask,chatter,lsattr命令解说">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s1.ax1x.com/2020/03/17/8UzIfg.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/03/17/8UzzhF.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/03/17/8aSu1H.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/17/8aEgCq.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/17/8aEOxK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/17/8aV9IA.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/03/17/8aSJN8.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/03/17/8aS64U.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/03/17/8aSvDI.png">
 <meta property="article:published_time" content="2020-03-17T11:26:17.000Z">
-<meta property="article:modified_time" content="2020-03-17T11:39:59.461Z">
+<meta property="article:modified_time" content="2020-03-17T12:16:01.810Z">
 <meta property="article:author" content="ANNI">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/03/17/8UzIfg.png">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/03/17/8aEgCq.png">
 
 
 
@@ -344,23 +344,27 @@
 
 <p><strong>文件默认权限：umask</strong><br><strong>文件隐藏属性：chattr,lsattr</strong></p>
 <h2 id="umask"><a href="#umask" class="headerlink" title="umask"></a>umask</h2><p><strong>umask:</strong>权限过滤符。当我们创建一个文件夹或文件时，原本文件夹权限应该是777，文件权限应是666。而通过umask的过滤，使我们的文件权限改变。</p>
-<img src="https://s1.ax1x.com/2020/03/17/8UzIfg.png" alt="8UzIfg.png" style="zoom: 33%;" /> 
+<img src="https://s1.ax1x.com/2020/03/17/8aEgCq.png" alt="8aEgCq.png" style="zoom:33%;" /> 
 
 <p>如图我们可看见创建后的权限并不是777</p>
 <p>文件夹的权限是755，文件的权限是644</p>
-<img src="https://s1.ax1x.com/2020/03/17/8UzzhF.png" alt="8UzzhF.png" style="zoom:33%;" /> 
+<img src="https://s1.ax1x.com/2020/03/17/8aEOxK.png" alt="8aEOxK.png" style="zoom:33%;" /> 
 
 <p>0022对应的权限是—-w–w-。过滤时，对应的umask是“-”则直接写下来其本身，对应的是“w”则变成“-”,若本身是“-”不论对应的umask是多少都可直接写作“-”。</p>
 <p><strong>⚠️注意：umask的值可修改. umask xxx</strong></p>
 <p><strong>umask -S:</strong></p>
 <p>假设我的umask值是0022(一般情况下看后三位也及022)；对应的是—-w—w- （u:无；g:w；o:w）</p>
 <p>而umask -S的结果：</p>
-<img src="https://s1.ax1x.com/2020/03/17/8aSu1H.png" alt="8aSu1H.png" style="zoom:33%;" /> 
+<img src="https://s1.ax1x.com/2020/03/17/8aV9IA.png" alt="8aV9IA.png" style="zoom:33%;" /> 
 
 <p>得出，umask -S是指让过滤后的文件保留(u:rwx,g:rx,o:rx)</p>
 <p>不难得出：umask -S与umask起到相反互补的作用。</p>
-<h2 id="lsattr-chattr"><a href="#lsattr-chattr" class="headerlink" title="lsattr,chattr"></a>lsattr,chattr</h2><p>\1.   a：让文件或目录仅供附加用途。</p>
-<p>\2.   i：不得任意更动文件或目录。</p>
+<h2 id="lsattr-chattr"><a href="#lsattr-chattr" class="headerlink" title="lsattr,chattr"></a>lsattr,chattr</h2><ol>
+<li><p>a：让文件或目录仅供附加用途。</p>
+</li>
+<li><p>i：不得任意更动文件或目录。</p>
+</li>
+</ol>
 <img src="https://s1.ax1x.com/2020/03/17/8aSJN8.png" alt="8aSJN8.png" style="zoom:33%;" /> 
 
 <p>先创建几个文件。并用 <strong>+a.。</strong></p>
